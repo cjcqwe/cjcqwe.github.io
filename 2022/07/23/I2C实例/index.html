@@ -6,13 +6,23 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="I2C简介I2C协议I2C是双线双向数据传输协议，可允许多主机（master）多从机（slave）。由两根线来传递数据，SDA (serial data line）和SCL（serial clock line）。 数据格式I2C 以_byte的数据格式进行数据操作，先传递最高位，再依次传递_最低位_。在SCL高电平时，去采集SDA信号。每一个byte结束时，跟随一个ACK_信号来告知接收端是否正确">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2022/07/23/I2C%E5%AE%9E%E4%BE%8B/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="I2C简介I2C协议I2C是双线双向数据传输协议，可允许多主机（master）多从机（slave）。由两根线来传递数据，SDA (serial data line）和SCL（serial clock line）。 数据格式I2C 以_byte的数据格式进行数据操作，先传递最高位，再依次传递_最低位_。在SCL高电平时，去采集SDA信号。每一个byte结束时，跟随一个ACK_信号来告知接收端是否正确">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/2718162/1627197276234-64bbedc8-0b51-4896-b222-d972b39bb12d.png#align=left&display=inline&height=335&margin=%5Bobject%20Object%5D&name=image.png&originHeight=335&originWidth=923&size=48782&status=done&style=stroke&width=923">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/2718162/1627197475561-f52ef365-5218-467d-af38-fd1d0153db3b.png#align=left&display=inline&height=414&margin=%5Bobject%20Object%5D&name=image.png&originHeight=414&originWidth=857&size=51153&status=done&style=stroke&width=857">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/2718162/1627197744345-fc583f3f-eff8-4850-9095-40df40b77ff2.png#align=left&display=inline&height=255&margin=%5Bobject%20Object%5D&name=image.png&originHeight=255&originWidth=540&size=22314&status=done&style=stroke&width=540">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/2718162/1627198001446-700c5609-b4d9-459b-aef3-c1c57f6b0381.png#align=left&display=inline&height=262&margin=%5Bobject%20Object%5D&name=image.png&originHeight=262&originWidth=812&size=42758&status=done&style=stroke&width=812">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2021/png/2718162/1627198205488-0f503bc4-a219-4290-8c8b-a8daf31de7e0.png#align=left&display=inline&height=150&margin=%5Bobject%20Object%5D&name=image.png&originHeight=150&originWidth=903&size=35801&status=done&style=stroke&width=903">
+<meta property="article:published_time" content="2022-07-23T04:06:58.506Z">
+<meta property="article:modified_time" content="2022-07-23T04:06:33.384Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2021/png/2718162/1627197276234-64bbedc8-0b51-4896-b222-d972b39bb12d.png#align=left&display=inline&height=335&margin=%5Bobject%20Object%5D&name=image.png&originHeight=335&originWidth=923&size=48782&status=done&style=stroke&width=923">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -69,9 +79,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-I2C实例" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-I2C实例" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/23/I2C%E5%AE%9E%E4%BE%8B/" class="article-date">
   <time class="dt-published" datetime="2022-07-23T04:06:58.506Z" itemprop="datePublished">2022-07-23</time>
@@ -98,135 +106,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-做梦梦见了你" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/23/%E5%81%9A%E6%A2%A6%E6%A2%A6%E8%A7%81%E4%BA%86%E4%BD%A0/" class="article-date">
-  <time class="dt-published" datetime="2022-07-23T03:38:34.484Z" itemprop="datePublished">2022-07-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>小爽最近在朋友圈发了些在迪士尼的照片，很是漂亮</p>
-<p>我最近梦到了你，梦见我们又开始重新接触，我们在一本旧杂志上写话交流，你一句，我一句，不知道为什么，在梦里，我们的字都写得很弯弯曲曲2333。<br>我们就这样在杂志上聊天，从一开始的拘谨生涩，渐渐的敞开心扉，诉说我们4.5月分开后的点点滴滴，心中念想，最后，我们在一起了。<br>再后面，梦到过年的时候，我们一起去串门一起去别人家的酒席，在酒席上，你侬我侬……</p>
-<p>再后来，梦就醒了，醒来第一件事，我赶紧去回忆梦的内容，生怕忘了。</p>
-<p>再随后，虚妄的念想之后，也只剩酸楚。</p>
-<p>终归是不可能实现了，可能小爽已经脱单了，也可能早就忘了我，我只是小爽众多追求者中，平凡的一个。</p>
-<p>今年疫情影响，可能你不会来叔叔家过年了，我也再也见不到你了。</p>
-<p>我们都在上海，上海很大，也很小，只是没了故意，我们再也不会再见面了。</p>
+  
+    <a href="/2022/07/23/%E5%81%9A%E6%A2%A6%E6%A2%A6%E8%A7%81%E4%BA%86%E4%BD%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/23/%E5%81%9A%E6%A2%A6%E6%A2%A6%E8%A7%81%E4%BA%86%E4%BD%A0/" data-id="cl5xdh6k50002gcvibfz49b71" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-test" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/23/test/" class="article-date">
-  <time class="dt-published" datetime="2022-07-23T03:28:48.000Z" itemprop="datePublished">2022-07-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/23/test/">test</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/23/test/" data-id="cl5xdh6k70003gcvi8ofq9ki5" data-title="test" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/23/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-07-23T03:03:09.489Z" itemprop="datePublished">2022-07-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/07/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/23/hello-world/" data-id="cl5xdh6k10001gcviczij6jbg" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
